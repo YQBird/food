@@ -42,15 +42,15 @@
       <div class="bulletin-wrapper">
         <img class="icon" v-if="poiInfo.discounts2" :src="poiInfo.discounts2[0].icon_url" />
         <span class="text" v-if="poiInfo.discounts2">{{poiInfo.discounts2[0].info}}</span>
-        <div class="detail" v-if="poiInfo.discounts2" >
+        <div class="detail" v-if="poiInfo.discounts2" @click="toggleBulletin">
           {{poiInfo.discounts2.length}}个活动
           <span class="icon-keyboard_arrow_right"></span>
         </div>
       </div>
 
-      <div class="bulletin-detail">
+      <div class="bulletin-detail" v-show="isShow">
         <div class="detail-wrapper">
-          <div class="content-wrapper">
+          <div class="main-wrapper" :style="detail_bg">
             <div class="icon" :style="head_bg"></div>
             <h3 class="name">{{poiInfo.name}} </h3>
             <p class="tip">
@@ -62,7 +62,7 @@
               配送时间：
               {{poiInfo.shipping_time}}
             </p>
-            <div class="discounts" v-if="poiInfo.discounts">
+            <div class="discounts" v-if="poiInfo.discounts2">
               <p>
                 <img :src="poiInfo.discounts2[0].icon_url" />
                 <span> {{poiInfo.discounts2[0].info}} </span>
@@ -71,7 +71,7 @@
           </div>
           
           <div class="close-wrapper">
-            <span class="icon-close"></span>
+            <span class="icon-close" @click="toggleBulletin"></span>
           </div>
         </div>
       </div>
@@ -80,11 +80,16 @@
 
 <<script>
   export default {
+    data() {
+      return {
+        isShow: false
+      }
+    },
     props: {
       poiInfo: {
         type: Object,
         default: {}
-      }
+      },
     },
     computed: {
       content_bg() {
@@ -92,6 +97,14 @@
       },
       head_bg() {
         return `background-image: url("${this.poiInfo.pic_url}")`
+      },
+      detail_bg() {
+        return `background-image: url("${this.poiInfo.poi_back_pic_url}")`
+      }
+    },
+    methods: {
+      toggleBulletin() {
+        this.isShow = !this.isShow;
       }
     }
   }

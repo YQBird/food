@@ -32,7 +32,7 @@ export default {
     line-height: 40px;
     border-bottom: 1px solid #e4e4e4;
   }
-
+/* 
   .nav .nav-item {
     flex: 1;
     text-align: center;
@@ -40,9 +40,9 @@ export default {
     text-decoration: none;
     color: #666666;
     position: relative;
-  }
+  } */
  
-  .nav .active {
+  /* .nav .active {
     color: #ffbb22;
   }
 
@@ -52,11 +52,10 @@ export default {
     display: inline-block; 
     background-color: #ffbb22;
 
-    /* in middle*/
     position: absolute;
     left: 50%;
     bottom: 0;
     margin-left: -10px;
-  }
+  } */
 
 </style>
