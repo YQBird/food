@@ -39,6 +39,7 @@
         </div>
       </div>
 
+      <!-- Bulletin popup content -->
       <div class="bulletin-wrapper">
         <img class="icon" v-if="poiInfo.discounts2" :src="poiInfo.discounts2[0].icon_url" />
         <span class="text" v-if="poiInfo.discounts2">{{poiInfo.discounts2[0].info}}</span>
@@ -48,33 +49,36 @@
         </div>
       </div>
 
-      <div class="bulletin-detail" v-show="isShow">
-        <div class="detail-wrapper">
-          <div class="main-wrapper" :style="detail_bg">
-            <div class="icon" :style="head_bg"></div>
-            <h3 class="name">{{poiInfo.name}} </h3>
-            <p class="tip">
-              {{poiInfo.min_price_tip}} <i>|</i>
-              {{poiInfo.shipping_fee_tip}} <i>|</i>
-              {{poiInfo.delivery_time_tip}} <i>|</i>
-            </p>
-            <p class="time">
-              配送时间：
-              {{poiInfo.shipping_time}}
-            </p>
-            <div class="discounts" v-if="poiInfo.discounts2">
-              <p>
-                <img :src="poiInfo.discounts2[0].icon_url" />
-                <span> {{poiInfo.discounts2[0].info}} </span>
+      <!-- Add Transition effect for bulletin -->
+      <transition name="fade">
+        <div class="bulletin-detail" v-show="isShow">
+          <div class="detail-wrapper">
+            <div class="main-wrapper" :style="detail_bg">
+              <div class="icon" :style="head_bg"></div>
+              <h3 class="name">{{poiInfo.name}} </h3>
+              <p class="tip">
+                {{poiInfo.min_price_tip}} <i>|</i>
+                {{poiInfo.shipping_fee_tip}} <i>|</i>
+                {{poiInfo.delivery_time_tip}} <i>|</i>
               </p>
+              <p class="time">
+                配送时间：
+                {{poiInfo.shipping_time}}
+              </p>
+              <div class="discounts" v-if="poiInfo.discounts2">
+                <p>
+                  <img :src="poiInfo.discounts2[0].icon_url" />
+                  <span> {{poiInfo.discounts2[0].info}} </span>
+                </p>
+              </div>
+            </div>
+            
+            <div class="close-wrapper">
+              <span class="icon-close" @click="toggleBulletin"></span>
             </div>
           </div>
-          
-          <div class="close-wrapper">
-            <span class="icon-close" @click="toggleBulletin"></span>
-          </div>
         </div>
-      </div>
+      </transition>
   </div>
 </template>
 

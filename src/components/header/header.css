@@ -272,5 +272,16 @@
   border: 1px solid rgba(140, 140, 140, 0.9)
 }
 
+/* Add Transition effect for bulletin */
+.fade-enter-active, .detail-leave-active {
+  transition: 1s all;
+}
 
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-to, .detail-leave {
+  opacity: 1;
+}
 
