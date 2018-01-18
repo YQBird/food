@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     
-    <Header></Header>
+    <Header :poiInfo="poiInfo"></Header>
 
     <Nav> </Nav>
 
@@ -20,6 +20,28 @@ export default {
   components: {
     Header,
     Nav
+  },
+  data() {
+    return {
+      poiInfo: {}
+    }
+  },
+
+  created() {
+    const that = this;
+
+    this.$axios.get('/api/goods')
+      .then((response) => {
+        const dataSource = response.data;
+        console.log(dataSource);
+        if (dataSource.code === 0) {
+          that.poiInfo = dataSource.data.poi_info;
+          console.log(that.poiInfo);
+        }
+      })
+      .catch((err) => {
+
+      })
   }
 }
 </script>
@@ -31,6 +53,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
