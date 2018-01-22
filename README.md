@@ -1,6 +1,9 @@
 # food
 
 > A Vue.js project
+The project is target to be an chinese online food order single page application.
+The UI is design for mobile device only.
+The project is created using Vue-cli and data is mock data from an local JSON file.
 
 ## Build Setup
 
