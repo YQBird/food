@@ -34,7 +34,7 @@
           <h3 class="title">{{item.name}}</h3>
 
           <ul>
-            <li v-for="food in item.spus" class="food-item">
+            <li v-for="food in item.spus" class="food-item" @click="showDetail(food)">
               <div class="icon" :style="head_bg(food.picture)">
               </div>
 
@@ -62,6 +62,8 @@
     </div>
     
     <Shopcart :selectedFood="selectedFood" :poiInfo="poiInfo"></Shopcart>
+
+    <Food :food="food" ref="foodView"></Food>
   </div>
 </template>
 
@@ -69,6 +71,8 @@
 import BScroll from 'better-scroll';
 import Shopcart from 'components/shopcart/Shopcart';
 import CartControl from 'components/cartControl/CartControl';
+import Food from 'components/food/Food';
+
 export default {
   data() {
     return {
@@ -78,13 +82,15 @@ export default {
       listHeight: [],
       scrollY: 0,
       menuScroll: {},
-      foodScroll: {}
+      foodScroll: {},
+      food:{}
     }
   },
 
   components: {
     Shopcart,
-    CartControl
+    CartControl,
+    Food
   },
 
   created() {
@@ -157,6 +163,13 @@ export default {
       });
 
       return count;
+    },
+
+    showDetail(food) {
+      this.food = food;
+
+      // invoke method in child components
+      this.$refs.foodView.showView();   
     }
   },
   computed: {
