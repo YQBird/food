@@ -1,6 +1,6 @@
 <template>
   <transition name="detail">
-    <div class="food" v-show="showFlag" ref="foodView">
+    <div class="food" id="food" v-show="showFlag" ref="foodView">
       <div class="food-wrapper">
         <div class="food-content">
           <div class="img-wrapper">
@@ -123,7 +123,7 @@ export default {
 </script>
 
 <style>
-  .food {
+  #food {
     position: fixed;
     left: 0;
     top: 0;
