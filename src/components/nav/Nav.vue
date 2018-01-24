@@ -6,7 +6,7 @@
     </router-link>
 
     <router-link to="/ratings" class="nav-item">
-      评价
+      评价({{commentNum}})
       <i class="line"></i>
     </router-link>
 
@@ -20,7 +20,12 @@
 
 <<script>
 export default {
-  
+  props: {
+    commentNum: {
+      type: Number,
+      default: 0
+    }
+  }
 }
 </script>
 
@@ -42,7 +47,7 @@ export default {
     position: relative;
   }
  
-  /* .nav .active {
+  .nav .active {
     color: #ffbb22;
   }
 
@@ -56,6 +61,6 @@ export default {
     left: 50%;
     bottom: 0;
     margin-left: -10px;
-  } */
+  }
 
 </style>

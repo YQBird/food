@@ -1,0 +1,87 @@
+.ratings {
+  position: absolute;
+  left: 0;
+  top: 191px;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ratings .ratings-wrapper .overview {
+  padding: 20px 0 18px 0;
+  display: flex;
+}
+
+.ratings .ratings-wrapper .overview .overview-left {
+  flex: 1;
+  padding-left: 26px;
+}
+
+.ratings .ratings-wrapper .overview .overview-left  .comment-score {
+  float: left;
+  width: 48px;
+  text-align: center;
+  margin-right: 26px;
+}
+
+.ratings .ratings-wrapper .overview .overview-left  .comment-score .score {
+  font-size: 23px;
+  font-weight: bold;
+  color: #ffb00f;
+  margin-bottom: 9px;
+}
+
+.ratings .ratings-wrapper .overview .overview-left  .comment-score .text {
+  font-size: 11px;
+  color: #666666;
+}
+
+.ratings .ratings-wrapper .overview .overview-left .other-score {
+  float: left;
+  padding-top: 3px;
+
+}
+
+.ratings .ratings-wrapper .overview .overview-left .other-score .item {
+  height: 11px;
+}
+
+.ratings .ratings-wrapper .overview .overview-left .other-score .item .text {
+  font-size: 11px;
+  color: #666666;
+  margin-right: 11px;
+  float: left;
+}
+
+.ratings .ratings-wrapper .overview .overview-left .other-score .item .star {
+  float: left;
+  margin-right: 11px;
+}
+
+.ratings .ratings-wrapper .overview .overview-left .other-score .item .score {
+  float: left;
+  font-size: 11px;
+  color: #ffb000;
+}
+
+.ratings .ratings-wrapper .overview .overview-left .other-score .quality-score {
+  margin-bottom: 14px;
+}
+
+.ratings .ratings-wrapper .overview .overview-right {
+  flex: 0 0 100px;
+  text-align: center;
+  border-left: 1px solid #9d9d9d;
+}
+
+.ratings .ratings-wrapper .overview .overview-right .delivery-score .score {
+  font-size: 19px;
+  font-weight: 500;
+  color: #999999;
+  margin-top: 3px;
+}
+
+.ratings .ratings-wrapper .overview .overview-right .delivery-score .text {
+  font-size: 11px;
+  color: #999999;
+}

@@ -3,7 +3,7 @@
     
     <Header :poiInfo="poiInfo"></Header>
 
-    <Nav> </Nav>
+    <Nav :commentNum="commentNum"> </Nav>
 
     <router-view></router-view>
   </div>
@@ -21,7 +21,8 @@ export default {
   },
   data() {
     return {
-      poiInfo: {}
+      poiInfo: {},
+      commentNum: 0
     }
   },
 
@@ -31,10 +32,19 @@ export default {
     this.$axios.get('/api/goods')
       .then((response) => {
         const dataSource = response.data;
-        console.log(dataSource);
         if (dataSource.code === 0) {
           that.poiInfo = dataSource.data.poi_info;
-          console.log(that.poiInfo);
+        }
+      })
+      .catch((err) => {
+
+      });
+
+    this.$axios.get('/api/ratings')
+      .then((response) => {
+        const dataSource = response.data;
+        if (dataSource.code === 0) {
+          that.commentNum = dataSource.data.comment_num;
         }
       })
       .catch((err) => {
