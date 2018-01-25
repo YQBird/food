@@ -85,3 +85,148 @@
   font-size: 11px;
   color: #999999;
 }
+
+.ratings .ratings-wrapper .content {
+  padding: 16px;
+}
+
+.ratings .ratings-wrapper .content .rating-select {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 0;
+  border: 1px solid #ffb000;
+  margin-bottom: 11px;
+  border-radius: 3px;
+}
+
+.ratings .ratings-wrapper .content .rating-select .item {
+  width: 33.3%; 
+  display: inline-block;
+  height: 33px;
+  line-height: 33px;
+  font-size: 14px;
+  text-align: center;
+  border-right: 1px solid #ffb000;
+  box-sizing: border-box;
+  color: #ffb000;
+}
+
+.ratings .ratings-wrapper .content .rating-select .item.active {
+  background: #ffb000;
+  color: black;
+}
+
+.ratings .ratings-wrapper .content .rating-select .item:last-child {
+  border-right: 0;
+}
+
+.ratings .ratings-wrapper .content .rating-select .item:last-child img {
+  height: 14px;
+  vertical-align: middle;
+}
+
+.ratings .ratings-wrapper .content .labels-view {
+  /* margin-bottom: 14px; */
+}
+
+.ratings .ratings-wrapper .content .labels-view .item {
+  display: inline-block;
+  height: 27px;
+  margin-right: 6px;
+  font-size: 11px;
+  padding: 0 10px;
+  border-radius: 3px;
+  line-height: 27px;
+  background: #f4f4f4;
+  margin-bottom: 6px;
+  color: #999999;
+}
+
+.ratings .ratings-wrapper .content .labels-view .item.highlight {
+  color: #656565;
+}
+
+.ratings .ratings-wrapper .content .rating-list {
+  width: 100%;
+}
+
+.ratings .ratings-wrapper .content .rating-list .rating-item{
+  display: flex;
+  width: 100%;
+  padding: 16px 16px 16px 0; 
+  box-sizing: border-box;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.ratings .ratings-wrapper .content .rating-list .rating-item .rating-header {
+  flex: 0 0 35px;
+  margin-right: 11px;
+}
+
+.ratings .ratings-wrapper .content .rating-list .rating-item .rating-header img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.ratings .ratings-wrapper .content .rating-list .rating-item .rating-main {
+  flex: 1;
+}
+
+.ratings .ratings-wrapper .content .rating-list .rating-item .rating-main .user {
+  width: 50%;
+  float: left;
+  font-size: 11px;
+  color: #333333;
+  text-align: left;
+}
+
+.ratings .ratings-wrapper .content .rating-list .rating-item .rating-main .time {
+  width: 50%;
+  float: right;
+  font-size: 9px;
+  line-height: 11px;
+  color: #666666;
+  text-align: right;
+}
+
+.ratings .ratings-wrapper .content .rating-list .rating-item .rating-main .star-wrapper {
+  float: left;
+  margin-top: 12px;
+  margin-bottom: 15px;
+  text-align: left;
+  width: 100%;
+}
+
+.ratings .ratings-wrapper .content .rating-list .rating-item .rating-main .star-wrapper .text {
+  font-size: 11px;
+  color: #999999;
+  float: left;
+
+}
+
+.ratings .ratings-wrapper .content .rating-list .rating-item .rating-main .star-wrapper .star {
+  float: left;
+  margin-left: 7px;
+}
+
+.ratings .ratings-wrapper .content .rating-list .rating-item .rating-main .contents {
+  font-size: 13px;
+  line-height: 19px;
+  float: left;
+  text-align: left;
+  width: 100%;
+}
+
+.ratings .ratings-wrapper .content .rating-list .rating-item .rating-main .contents i {
+  color: #576b95;
+}
+
+.ratings .ratings-wrapper .content .rating-list .rating-item .rating-main .img-wrapper {
+  float: left;
+  margin-top: 9px;
+}
+
+.ratings .ratings-wrapper .content .rating-list .rating-item .rating-main .img-wrapper img {
+  width: 175px;
+}
