@@ -122,10 +122,6 @@
   vertical-align: middle;
 }
 
-.ratings .ratings-wrapper .content .labels-view {
-  /* margin-bottom: 14px; */
-}
-
 .ratings .ratings-wrapper .content .labels-view .item {
   display: inline-block;
   height: 27px;
